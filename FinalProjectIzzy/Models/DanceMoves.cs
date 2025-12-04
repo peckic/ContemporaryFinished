@@ -5,15 +5,16 @@ namespace FinalProjectIzzy.Models
 {
     public class DanceMoves
     {
-        public string MoveNameId { get; set; }
-        public string Style { get; set; }
+        [Key]
+        public int MoveId { get; set; }
+        public string Style { get; set; } = string.Empty;
         public int Difficulty { get; set; }
-        public string MusicType { get; set; }
+        public string MusicType { get; set; } = string.Empty;
         public int IdealTempo { get; set; }
         public DanceMoves() { }
-        public DanceMoves(string moveNameId, string style, int difficulty, string musicType, int idealTempo)
+        public DanceMoves(int moveId, string style, int difficulty, string musicType, int idealTempo)
         {
-            MoveNameId = moveNameId;
+            MoveId = moveId;
             Style = style;
             Difficulty = difficulty;
             MusicType = musicType;
